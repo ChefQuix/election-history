@@ -21,3 +21,12 @@ export default {
 
 }
 </script>
+
+<style>
+@media only screen and (max-width: 465px) {
+    img {
+        width: 100%;
+    }
+}
+
+</style>
