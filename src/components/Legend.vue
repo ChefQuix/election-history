@@ -1,7 +1,7 @@
 <template>
-	<v-layout align-start justify-space-between row >
-		<v-flex v-for="item in current_legend" :key="item.party">
-			<div class="color-box" :style="'background-color: ' + item.colour + ';'">&nbsp;</div>
+	<v-layout align-start align-content-start row >
+		<v-flex v-for="item in current_legend" :key="item.party" xs3 class="ma-1 pa-1">
+			<div class="color-box" :style="'background-color: ' + item.colour + ';'"></div>
 			{{ item.party }}
 		</v-flex>
 	</v-layout>
@@ -10,31 +10,6 @@
 <script>
 export default {
 	props: ['legend', 'current_year'],
-	/*
-	data() {
-		return {
-			current_legend: {},
-		}
-	},
-	
-	methods: {
-		set_current_legend(year) {
-			for (var i in this.legend) {
-				if (year <= i) {
-					return this.legend[i];
-				}
-			}
-			return this.current_legend[0];
-	
-		}
-
-	},
-	watch: {
-		current_year(year) {
-			this.set_current_legend(year);
-		}
-	},
-	*/
 	computed: {
 		current_legend() {
 			let last = 0;
@@ -55,7 +30,6 @@ export default {
 
 <style>
 div.color-box { 
-	float: left;
 	width: 20px;
 	height: 20px;
 	margin: 5px;

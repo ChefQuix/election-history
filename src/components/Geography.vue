@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style>
-@media only screen and (max-width: 465px) {
+@media only screen and (max-width: 485px) {
     img {
         width: 100%;
     }

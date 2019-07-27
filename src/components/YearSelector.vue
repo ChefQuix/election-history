@@ -1,9 +1,11 @@
 <template>
     <ul>
         <li>Election</li>
-        <li v-for="year in years" :key="year" 
-        @mouseover="selectYear(year)" 
-        @click="selectYear(year)" class="year">{{ year }}</li>
+        <li v-for="year in years" :key="year">
+            <a @mouseover="selectYear(year)" 
+                @click="selectYear(year)" 
+                class="year">{{ year }}</a>
+            </li>
     </ul>
 </template>
 
@@ -20,5 +22,5 @@ export default {
 </script>
 <style>
 ul { list-style: none; }
-li.year:hover { cursor: pointer; }
+li .year:hover { cursor: pointer; }
 </style>

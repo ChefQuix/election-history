@@ -14,13 +14,13 @@
 						{{ type.type }}
 					</v-tab>
 					<v-tab-item v-for="type in types" :key="type.code">
-						<Legend :legend="legend" :current_year="current_year"></Legend>
 						<v-layout align-start justify-space-between row >
-							<v-flex>
-						<YearSelector v-on:select-year="current_year = $event" :years="election_years"></YearSelector>
+							<v-flex xs3>
+								<YearSelector v-on:select-year="current_year = $event" :years="election_years"></YearSelector>
 							</v-flex>
-							<v-flex>
-						<Geography :type="type.code" :year="current_year" />
+							<v-flex xs9>
+								<Legend :legend="legend" :current_year="current_year"></Legend>
+								<Geography :type="type.code" :year="current_year" />
 							</v-flex>
 						</v-layout>
 					</v-tab-item>
