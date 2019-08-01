@@ -1,28 +1,46 @@
 <template>
-	<v-layout align-start align-content-start row >
+<div>
+	<v-layout align-start align-content-start flex>
 		<v-flex v-for="item in current_legend" :key="item.party" xs3 class="ma-1 pa-1">
-			<div class="color-box" :style="'background-color: ' + item.colour + ';'"></div>
+			<div class="color-box" :style="'background-color: ' + item.colour + ';'"
+			></div>
 			{{ item.party }}
 		</v-flex>
 	</v-layout>
+	<LegendDetail 
+		:legend_year="legend_year" 
+	></LegendDetail>
+</div>
 </template>
 
 <script>
+import LegendDetail from '@/components/LegendDetail'
+
 export default {
+	components: { LegendDetail },
 	props: ['legend', 'current_year'],
+	data() {
+		return {
+			open_more_info: false,
+		}
+	},
 	computed: {
-		current_legend() {
+		legend_year() {
 			let last = 0;
 			for (var i in this.legend) {
 				if (this.current_year == i) {
-					return this.legend[i];
+					return i;
 				} else if (this.current_year > i) {
 					last = i;
 				} else if (this.current_year < i) {
-					return this.legend[last];
+					return last;
 				}
 			}
-			return this.legend[last];
+			return last;
+		},
+
+		current_legend() {
+			return this.legend[this.legend_year];
 		}
 	}
 }
