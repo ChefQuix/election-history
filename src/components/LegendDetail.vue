@@ -7,7 +7,7 @@
     </v-btn>
     <v-dialog
       v-model="show_dialog"
-      max-width="330"
+      max-width="230"
       >
         <v-card>
             <v-card-title class="headline">Legend Details</v-card-title>

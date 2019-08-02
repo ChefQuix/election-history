@@ -1,6 +1,6 @@
 <template>
 <span>
-    <img :src="current_file">
+    <img :src="current_file" height="550px">
 </span>
 </template>
 
