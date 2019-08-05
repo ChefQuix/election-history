@@ -26,6 +26,7 @@ export default {
 @media only screen and (max-width: 485px) {
     img {
         width: 100%;
+        height: auto;
     }
 }
 

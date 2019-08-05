@@ -13,7 +13,7 @@
 					<v-tab v-for="type in types" :key="type.code">
 						{{ type.type }}
 					</v-tab>
-					<v-tab-item v-for="type in types" :key="type.code">
+					<v-tab-item v-for="type in types" :key="type.code" class="mt-2">
 						<v-layout align-start justify-space-between row >
 							<v-flex xs3>
 								<YearSelector v-on:select-year="current_year = $event" :years="election_years"></YearSelector>
@@ -65,7 +65,7 @@ export default {
 			legend: {
 				1958: [
 					{
-						party: 'Progressive Conservative',
+						party: 'PC',
 						colour: '#0055fe',
 					},
 					{
@@ -79,7 +79,7 @@ export default {
 				],
 				1962: [
 					{
-						party: 'Progressive Conservative',
+						party: 'PC',
 						colour: '#0055fe',
 					},
 					{
@@ -87,7 +87,7 @@ export default {
 						colour: '#fe2037',
 					},
 					{
-						party: 'New Democratic Party',
+						party: 'NDP',
 						colour: '#ffaa00',
 					},
 					{
@@ -97,7 +97,7 @@ export default {
 				],
 				1973: [
 					{
-						party: 'Progressive Conservative',
+						party: 'PC',
 						colour: '#0055fe',
 					},
 					{
@@ -105,7 +105,7 @@ export default {
 						colour: '#fe2037',
 					},
 					{
-						party: 'New Democratic Party',
+						party: 'NDP',
 						colour: '#ffaa00',
 					},
 					]
@@ -115,3 +115,13 @@ export default {
 
 }
 </script>
+
+<style>
+/*
+@media only screen and (max-width: 960px) {
+	.v-tabs__wrapper {
+	   margin-bottom: 1em; 
+	}
+}
+*/
+</style>

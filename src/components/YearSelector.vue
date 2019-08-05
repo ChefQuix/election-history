@@ -1,6 +1,6 @@
 <template>
     <ul>
-        <li>Election</li>
+        <li><h3>Election Year</h3></li>
         <li v-for="year in years" :key="year">
             <a @mouseover="selectYear(year)" 
                 @click="selectYear(year)" 
