@@ -1,7 +1,7 @@
 <template>
 	<v-app>
 		<v-content>
-			<v-container fluid>
+			<v-container fluid pa-0 ma-0>
 
 				<v-tabs
 					v-model="active"
@@ -117,11 +117,7 @@ export default {
 </script>
 
 <style>
-/*
-@media only screen and (max-width: 960px) {
-	.v-tabs__wrapper {
-	   margin-bottom: 1em; 
-	}
+.container {
+	padding: 0;
 }
-*/
 </style>
