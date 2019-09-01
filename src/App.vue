@@ -60,7 +60,7 @@ export default {
 		return {
 			active: 'A',
 			types: [{code: 'A', type: 'Winnipeg and Brandon' },{ code: 'B', 'type': 'Manitoba'}],
-			current_year: 1988,
+			current_year: 2016,
 			election_years: [2016, 2011, 2007, 2003, 1999, 1995, 1990, 1988, 1986, 1981, 1977, 1973, 1969, 1966, 1962, 1959, 1958],
 			legend: {
 				1958: [
